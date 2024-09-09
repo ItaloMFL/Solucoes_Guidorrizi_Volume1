@@ -83,7 +83,35 @@
 		
 		\textbf{resposta:}
 		
-		%Começar a responder a questão apartir daqui!
+		Antes de iniciar a manipulação da derivada, precisamos trocar a base do logaritmo e deixa-lo em logaritmo natural.
+		
+		\begin{equation*}
+			f(x) = \log_{a}{x} = \frac{\log_{e}{x}}{\log_{e}{a}} = \frac{\ln{x}}{\ln{a}}
+		\end{equation*}
+		
+		Aplicando o limite e tirando o $\frac{1}{\ln{a}}$ do limite, pois $a$ não depende do $h$ quando ele tende para zero. Então a equação fica da seguinte forma:
+		
+		\begin{equation*}
+			f'(x) = \frac{1}{\ln{a}} \cdot \lim_{h \rightarrow 0} \frac{\ln{(x + h)} - \ln{(x)}}{h}
+		\end{equation*}
+		
+		Aplicando a propriedade operatória dos logaritmos, vamos utilizar a propriedade de subtração.
+		
+		\begin{equation*}
+			\frac{\ln{a}}{\ln{b}} \Rightarrow \ln{a} - \ln{b}
+		\end{equation*}
+		
+		\begin{equation*}
+			f'(x) = \frac{1}{\ln{a}} \cdot \lim_{h \rightarrow 0} \left[ \frac{1}{h} \ln \left( {\frac{x +h}{x}}\right) \right]
+		\end{equation*}
+		
+		Aplicando a propriedade da potência de logaritmos
+		
+		\begin{equation*}
+			f'(x) = \frac{1}{\ln{a}} \cdot \lim_{h \rightarrow 0} \left[ \ln \left( {\frac{x +h}{x}}\right)^{\frac{1}{h}} \right]
+		\end{equation*}
+		
+		Deve-se fazer uma mudança de variavel $u=\frac{h}{x} \Rightarrow h =u \cdot x$. Lembrando que deve mudar também que quando $h \rightarrow 0$ e $u \rightarrow 0$
 		
 		\vspace{1em}
 		
