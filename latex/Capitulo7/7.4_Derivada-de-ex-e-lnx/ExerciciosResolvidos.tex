@@ -111,7 +111,33 @@
 			f'(x) = \frac{1}{\ln{a}} \cdot \lim_{h \rightarrow 0} \left[ \ln \left( {\frac{x +h}{x}}\right)^{\frac{1}{h}} \right]
 		\end{equation*}
 		
-		Deve-se fazer uma mudança de variavel $u=\frac{h}{x} \Rightarrow h =u \cdot x$. Lembrando que deve mudar também que quando $h \rightarrow 0$ e $u \rightarrow 0$
+		Deve-se fazer uma mudança de variavel $u=\frac{h}{x} \Rightarrow h =u \cdot x$. Lembrando que deve mudar também que quando $h \rightarrow 0$ e $u \rightarrow 0$. Assim
+		
+		\begin{equation*}
+			f'(x) = \frac{1}{\ln{a}} \cdot \lim_{u \rightarrow 0} \left[ \ln \left( {\frac{x + ux}{x}}\right)^{\frac{1}{ux}} \right]
+		\end{equation*}
+		\begin{equation*}
+			f'(x) = \frac{1}{\ln{a}} \cdot \lim_{u \rightarrow 0} \left[ \frac{1}{x} \ln \left( {1 + u}\right)^{\frac{1}{u}} \right]
+		\end{equation*}
+				
+		Como x não depende de u, podemos remover o 1/x do limite
+		
+		\begin{equation*}
+			f'(x) = \frac{1}{\ln{a}} \cdot \frac{1}{x} \lim_{u \rightarrow 0} \left[ \ln \left( {1 + u}\right)^{\frac{1}{u}} \right]
+		\end{equation*}
+				
+		O segundo limite fundamental diz que:
+		
+		\begin{equation*}
+			e = \lim_{x \rightarrow 0} \left[ \ln \left( {x + h}\right)^{\frac{1}{h}} \right]
+		\end{equation*}
+		
+		Aplicando essa propriedade na conta vai dar um $\ln{e} = 1$.
+		
+		\begin{equation*}
+			f'(x) = \frac{1}{x \cdot \ln{a}}
+		\end{equation*}
+		
 		
 		\vspace{1em}
 		
