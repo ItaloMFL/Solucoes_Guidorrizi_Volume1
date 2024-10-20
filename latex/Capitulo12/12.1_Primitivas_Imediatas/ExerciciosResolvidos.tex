@@ -1,0 +1,67 @@
+\documentclass[article,12pt,oneside,a4paper,brazil]{abntex2}
+
+\usepackage[alf]{abntex2cite}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[outline]{contour} % glow around text
+\usepackage{lipsum}
+\usepackage{amsmath} % For align environment
+\usepackage{cancel}
+\usepackage{blindtext}
+\usepackage{tikz, tkz-base, tkz-fct}
+\usepackage{pgfplots}
+\usepackage{indentfirst}
+\usepackage{multirow}
+\usepackage{physics}
+\usepackage[T1]{fontenc}    % para suporte a caracteres acentuados
+\usepackage{indentfirst}
+
+\usetikzlibrary{angles,quotes} % for pic
+\contourlength{1.2pt}
+
+% Estou colocando 2 de espaço por cada pergunta
+
+% Personalizando as coisas do latex
+\usepackage[left=2.5cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
+
+\begin{document}
+	\section*{12.1 Primitivas Imediatas}
+	\subsection*{12.1.1 Teorema: }
+	
+	\begin{flushleft}	
+		São válidas as seguinte primitivas, para $\alpha \neq  0$ e $c$ e $k$ são constantes reais.
+		
+		\textbf{i. }  $\int c \,dx\ = cx + k$ \\ [1em]
+		\textbf{ii. } $\int e^x \,dx\ = e^x + k$ \\ [1em]
+	\end{flushleft}
+	
+	\subsection*{12.1.2 Notas de Aulas}
+	
+	\begin{flushleft}
+		A primitica é conhecida como \textbf{antiderivada}. Recebe esse nome, pois quando temos uma função $f(x)$ e derivamos ela e chegamos até $F'(x)$, a primitiva podemos fazer o caminho inverso, ou seja, $\int F'(x) dx = f(x)$, ao contrário também vale $\dfrac{d}{dx}f(x) = F'(x)$. 
+		
+		Note que todos as primitivas são acompanhadas por um $k$, esse $k$ significa que é uma constante qualquer. Se utiliza isso, pois $f(x) = g(x)$, se derivarmos ambos os lados, então $f'(x) = g'(x)$, substraindo de ambos os lados o $g'(x)$, ficamos com o resultado $f'(x) - g'(x) = 0$, e se derivarmos algo e algo dar zero, significa que é uma constante. Então $f'(x) - g'(x) = k$, o $k$ é representado apenas para um constante que virou zero depois da derivação e não há como recuperar, então deixa a equação abrangente.
+	\end{flushleft}
+	
+	\subsection*{12.1.3 Exercícios: }
+	\begin{flushleft}	
+		\textbf{1.} Calcule e verifique sua resposta por Derivação.
+		
+		\textbf{a) } $\int x^2 \,dx = \frac{x^3}{3} + k$ \\[1em]
+		\textbf{b) } $\int x \,dx = \frac{x^2}{2} + k$ \\[1em]
+		\textbf{c) } $\int x^5 \,dx = \frac{x^6}{6} + k$ \\[1em]
+		\textbf{d) } $\int \sqrt{x} \,dx = \frac{2}{3} x^{\frac{3}{2}} + k$ \\[1em]
+		\textbf{e) } $\int \sqrt[5]{x^2} \,dx = \frac{5 x \sqrt[5]{x^{12}}}{12} + k$ \\[1em]
+		\textbf{f) } $\int x^{-4} \,dx = -\frac{1}{3 x^3} + k$ \\[1em]
+		\textbf{g) } $\int \frac{1}{x^3} \,dx = -\frac{1}{2 x^2} + k$ \\[1em]
+		\textbf{h) } $\int \frac{x + x^2}{x^2} \,dx = \ln{ \left| x \right| + x + k}$\\[1em]
+		\textbf{h) } $\int \left( \frac{1}{x} + \frac{1}{x^2} \right) \,dx = \ln{\left| x \right|} - \frac{1}{x} + k$\\[1em]
+		
+		
+	\end{flushleft}
+	
+	
+	
+	
+\end{document}
