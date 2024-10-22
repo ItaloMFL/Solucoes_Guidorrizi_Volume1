@@ -1,0 +1,164 @@
+\documentclass[article,12pt,oneside,a4paper,brazil]{abntex2}
+
+\usepackage[alf]{abntex2cite}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[outline]{contour} % glow around text
+\usepackage{lipsum}
+\usepackage{amsmath} % For align environment
+\usepackage{cancel}
+\usepackage{blindtext}
+\usepackage{tikz, tkz-base, tkz-fct}
+\usepackage{pgfplots}
+\usepackage{indentfirst}
+\usepackage{multirow}
+\usepackage{physics}
+\usepackage[T1]{fontenc}    % para suporte a caracteres acentuados
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usetikzlibrary{angles,quotes} % for pic
+\contourlength{1.2pt}
+
+% Estou colocando 2 de espaço por cada pergunta
+
+% Personalizando as coisas do latex
+\usepackage[left=2.5cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
+
+\begin{document}
+	\section*{12.1 Integracao Por Partes}
+	
+	\subsection*{12.1.1 Teorema: }
+	
+	\begin{flushleft}	
+		Seja $f$ e $g$ duas funçĩes deriváveis. Então
+		
+		\begin{equation*}
+			[f(x) \cdot g(x)]' = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+		\end{equation*}
+		
+		Se intergrarmos ambos os lados da igualdade, a equação fica da seguinte forma:
+		
+		\begin{equation*}
+			\int [f(x) \cdot g(x)]' \,dx = \int f'(x) \cdot g(x) \,dx + \int f(x) \cdot g'(x) \,dx
+		\end{equation*}
+		
+		Isolando $\int f(x) \cdot g'(x) \,dx$ na equação:
+		
+		\begin{equation*}
+			\int f(x) \cdot g'(x) \,dx = f(x) \cdot g(x) - \int f'(x) \cdot g(x) \,dx
+		\end{equation*}
+	
+		Nos livros é comum se achar da seguinte forma:
+		
+		\begin{equation*}
+			\int u \cdot \,dv = u \cdot v- \int v \cdot du \,dx
+		\end{equation*}
+		
+	\end{flushleft}
+	
+	\subsection*{12.1.2 Notas de Aulas}
+	
+	\begin{flushleft}
+		Seja $f$ e $g$ duas funçĩes deriváveis. Então
+		
+		\begin{equation*}
+			[f(x) \cdot g(x)]' = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+		\end{equation*}
+		
+		Se intergrarmos ambos os lados da igualdade, a equação fica da seguinte forma:
+		
+		\begin{equation*}
+			\int [f(x) \cdot g(x)]' \,dx = \int f'(x) \cdot g(x) \,dx + \int f(x) \cdot g'(x) \,dx
+		\end{equation*}
+		
+		Repare, lembras-se que $\int [f(x) \cdot g(x)]' \,dx = f(x) \cdot g(x)$, pois está integrando e derivando a mesma coisa, e como um é inverso do outro fica igual. Além disso, podemos isolar o uma das integrais, nesse caso tarei isolando a integral $\int f(x) \cdot g'(x) \,dx$, deixando a equação da seguinte forma:
+		
+		\begin{equation*}
+			\int f(x) \cdot g'(x) \,dx = f(x) \cdot g(x) - \int f'(x) \cdot g(x) \,dx
+		\end{equation*}
+	
+		Uma forma de simplificada dessa fórmula é obtida fazendo-se $u=f(x)$ e $v=g(x)$.
+		
+		
+		\begin{equation*}
+			\int u \cdot \,dv = u \cdot v- \int v \cdot du \,dx
+		\end{equation*}
+	
+		Onde $du = f'(x)dx$ e $dv=g'(x)dx$.
+		
+		\textbf{Observação que o professor fez: } Para escolher quais são as funções $u$ e $dv$ na fórmula de integração por partes, usamos o seguinte esquema:
+		
+		L = Logaritmo
+		
+		I = Inversa Trigonometrica
+		
+		A = Algebrica
+		
+		T = Trigonometrica
+		
+		E = Exponencial
+		
+		Quando mais para cima for, melhor escolha é o $u$ e quanto mais para baixo a outra função melhor escolhar é o $dv$. \\[2em]
+	\end{flushleft}
+	
+	\subsection*{12.1.3 Exemplos de Questões: }
+	
+	\begin{flushleft}
+		\textbf{Exemplo 1:} Calcule $\int e^x \cdot \cos({x}) \,dx$. 
+		
+		\textbf{Solução: } Sejam $u = \cos({x})$ e $dv = e^x \cdot dx$. Então $du = - \sin({x}) \cdot dx$ e $v = \int e^x \,dx = e^x$. Assim temos:
+		
+		\begin{equation*}
+			\int e^x \cdot \cos{(x)} dx = e^x \cdot \cos{(x)} - \int e^x \cdot - \sin{(x)} \,dx
+		\end{equation*}
+		\begin{equation*}
+			\int e^x \cdot \cos{(x)} dx = e^x \cdot \cos{(x)} + \int e^x \cdot \sin{(x)} \,dx
+		\end{equation*}
+		
+		Note que não adiantou muito, então teremos que aplicar novamente a integração por partes. Para evitar confundir com as antigas variáveis $u$ e $v$, vou utilizar chapéu em cima de ambas. Seja agora $\hat{u} = \sin{(x)}$ e $d\hat{v} =e^x \,dx$. Então $d\hat{u} = \cos{(x)} \,dx$ e $\hat{v} = \int e^x \,dx = e^x$. Logo: 
+		
+		\begin{equation*}
+			\int e^x \cdot \sin{(x)} dx = e^x \cdot \sin{(x)} - \int e^x \cdot \cos{(x)} \,dx
+		\end{equation*}
+		
+		Voltamos ao caso inicial. O que devemos fazer agora? Observemos que:
+		
+		\begin{equation*}
+			\int e^x \cdot \cos{(x)} dx = e^x \cdot \cos{(x)} + e^x \cdot \sin{(x)} - \int e^x \cdot \cos{(x)} \,dx
+		\end{equation*}
+		
+		Se somarmos $\int e^x \cdot \cos{(x)} \,dx$ em ambos os lados ficamos:
+		
+		\begin{equation*}
+			2 \cdot \int e^x \cdot \cos{(x)} dx = e^x \cdot \cos{(x)} + e^x \cdot \sin{(x)}
+		\end{equation*}
+		
+		Então, dividindo todos os lados por $2$, a equação fica da seguinte forma: 
+		
+		\begin{equation*}
+			\int e^x \cdot \cos{(x)} dx = \frac{1}{2} \cdot e^x \cdot \cos{(x)} + \frac{1}{2} \cdot e^x \cdot \sin{(x)}
+		\end{equation*}
+		
+		\vspace{2em}
+		
+		\textbf{Exemplo 2:} Mostre que
+		
+		\begin{equation*}
+			\int t^n \cdot e^{-5t} \,dt = - \frac{1}{2} \cdot t^n \cdot e^{-st} + \frac{n}{s} \int t^{n-1} \cdot e^{-st} \,dt \text{, } \forall x \in \mathbb{N}
+		\end{equation*}
+		
+	\end{flushleft}
+	
+	\subsection*{12.1.4 Exercícios: }
+	\begin{flushleft}	
+		
+	\end{flushleft}
+	
+	
+	
+	
+\end{document}
